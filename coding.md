@@ -1,13 +1,17 @@
 Easy Level (15 Questions)
 1. Find the largest element in a list
+```python
 python
+
 def find_largest(arr):
     return max(arr)
 
 # Test
 print(find_largest([1, 5, 3, 9, 2]))  # 9
+```
 
 2. Find the second largest element
+```python
 python
 def second_largest(arr):
     unique = list(set(arr))
@@ -15,6 +19,7 @@ def second_largest(arr):
     return unique[-2] if len(unique) >= 2 else None
 
 print(second_largest([10, 20, 4, 45, 99]))  # 45
+```
 
 
 
@@ -22,31 +27,37 @@ print(second_largest([10, 20, 4, 45, 99]))  # 45
 
 3. Check if list is sorted
 python
+```python
 def is_sorted(arr):
     return all(arr[i] <= arr[i+1] for i in range(len(arr)-1))
 
 print(is_sorted([1, 2, 3, 4]))  # True
 print(is_sorted([1, 3, 2, 4]))  # False
+```
 
 
 
 
 4. Reverse a list
 python
+```python
 def reverse_list(arr):
     return arr[::-1]
 
 print(reverse_list([1, 2, 3, 4]))  # [4, 3, 2, 1]
+```
 
 
 
 
 5. Find sum of all elements
 python
+```python
 def list_sum(arr):
     return sum(arr)
 
 print(list_sum([1, 2, 3, 4, 5]))  # 15
+```
 
 
 
@@ -298,10 +309,16 @@ def kth_largest(arr, k):
     return sorted(arr)[-k]
 
 print(kth_largest([3, 2, 1, 5, 6, 4], 2))  # 5
+
+
+
 27. Find kth smallest element
 python
 def kth_smallest(arr, k):
     return sorted(arr)[k-1]
+
+
+
 
 print(kth_smallest([3, 2, 1, 5, 6, 4], 3))  # 3
 28. Find all permutations of list
@@ -309,6 +326,9 @@ python
 def permutations(arr):
     from itertools import permutations
     return list(permutations(arr))
+
+
+    
 
 print(permutations([1, 2, 3]))  # [(1, 2, 3), (1, 3, 2), (2, 1, 3), ...]
 29. Find longest consecutive sequence
@@ -327,6 +347,10 @@ def longest_consecutive_sequence(arr):
     return longest
 
 print(longest_consecutive_sequence([100, 4, 200, 1, 3, 2]))  # 4
+
+
+
+
 30. Find product except self
 python
 def product_except_self(arr):
@@ -345,6 +369,11 @@ def product_except_self(arr):
     return result
 
 print(product_except_self([1, 2, 3, 4]))  # [24, 12, 8, 6]
+
+
+
+
+
 31. Find all subsets
 python
 def subsets(arr):
@@ -354,6 +383,12 @@ def subsets(arr):
     return result
 
 print(subsets([1, 2, 3]))  # [[], [1], [2], [1,2], [3], [1,3], [2,3], [1,2,3]]
+
+
+
+
+
+
 32. Find maximum product subarray
 python
 def max_product_subarray(arr):
@@ -369,6 +404,10 @@ def max_product_subarray(arr):
     return result
 
 print(max_product_subarray([2, 3, -2, 4]))  # 6
+
+
+
+
 33. Find container with most water
 python
 def max_area(height):
@@ -384,6 +423,10 @@ def max_area(height):
     return max_area
 
 print(max_area([1, 8, 6, 2, 5, 4, 8, 3, 7]))  # 49
+
+
+
+
 34. Find three sum
 python
 def three_sum(arr, target):
@@ -410,6 +453,11 @@ def three_sum(arr, target):
     return result
 
 print(three_sum([-1, 0, 1, 2, -1, -4], 0))  # [[-1, -1, 2], [-1, 0, 1]]
+
+
+
+
+
 35. Find next permutation
 python
 def next_permutation(arr):
@@ -426,6 +474,11 @@ def next_permutation(arr):
 
 print(next_permutation([1, 2, 3]))  # [1, 3, 2]
 Hard Level (15 Questions)
+
+
+
+
+
 36. Find median of two sorted arrays
 python
 def find_median_sorted_arrays(nums1, nums2):
@@ -437,6 +490,10 @@ def find_median_sorted_arrays(nums1, nums2):
         return merged[n//2]
 
 print(find_median_sorted_arrays([1, 3], [2]))  # 2.0
+
+
+
+
 37. Find trapping rain water
 python
 def trap_rain_water(height):
@@ -460,6 +517,11 @@ def trap_rain_water(height):
     return water
 
 print(trap_rain_water([0,1,0,2,1,0,1,3,2,1,2,1]))  # 6
+
+
+
+
+
 38. Find minimum in rotated sorted array
 python
 def find_min_rotated(arr):
@@ -473,6 +535,12 @@ def find_min_rotated(arr):
     return arr[left]
 
 print(find_min_rotated([4, 5, 6, 7, 0, 1, 2]))  # 0
+
+
+
+
+
+
 39. Search in rotated sorted array
 python
 def search_rotated(arr, target):
@@ -494,6 +562,13 @@ def search_rotated(arr, target):
     return -1
 
 print(search_rotated([4, 5, 6, 7, 0, 1, 2], 0))  # 4
+
+
+
+
+
+
+
 40. Find first and last position in sorted array
 python
 def search_range(arr, target):
@@ -520,6 +595,12 @@ def search_range(arr, target):
     return [find_first(), find_last()]
 
 print(search_range([5, 7, 7, 8, 8, 10], 8))  # [3, 4]
+
+
+
+
+
+
 41. Find k closest elements
 python
 def find_closest_elements(arr, k, x):
@@ -533,6 +614,11 @@ def find_closest_elements(arr, k, x):
     return arr[left:left + k]
 
 print(find_closest_elements([1, 2, 3, 4, 5], 4, 3))  # [1, 2, 3, 4]
+
+
+
+
+
 42. Find peak element
 python
 def find_peak_element(arr):
@@ -546,6 +632,11 @@ def find_peak_element(arr):
     return left
 
 print(find_peak_element([1, 2, 3, 1]))  # 2
+
+
+
+
+
 43. Find duplicate number
 python
 def find_duplicate(arr):
@@ -694,6 +785,9 @@ def word_break(s, word_dict):
     return dp[len(s)]
 
 print(word_break("leetcode", ["leet", "code"]))  # True
+
+
+
 49. Find maximum product of word lengths
 python
 def max_product_words(words):
@@ -713,6 +807,11 @@ def max_product_words(words):
     return max_prod
 
 print(max_product_words(["abcw", "baz", "foo", "bar", "xtfn", "abcdef"]))  # 16
+
+
+
+
+
 50. Find number of islands in grid
 python
 def num_islands(grid):
@@ -743,6 +842,10 @@ grid = [
     ['0','0','0','1','1']
 ]
 print(num_islands(grid))  # 3
+
+
+
+
 These questions cover a wide range of difficulties and concepts including:
 
 Basic list operations
