@@ -80,6 +80,9 @@ def remove_duplicates(arr):
     return list(set(arr))
 
 print(remove_duplicates([1, 2, 2, 3, 4, 4, 5]))  # [1, 2, 3, 4, 5]
+
+
+
 8. Count frequency of element
 python
 def count_frequency(arr, target):
